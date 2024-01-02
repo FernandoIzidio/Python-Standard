@@ -1,0 +1,1 @@
+First line, with a personal context_manager, maked by class manipulation

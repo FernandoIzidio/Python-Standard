@@ -1,0 +1,21 @@
+from enum import Enum
+
+class Enumerador(Enum):
+    DIREITA = 1
+    ESQUERDA = 2
+
+
+
+def mover(movimento: Enumerador):
+    if not isinstance(movimento, Enumerador):
+        raise ValueError('Direção não encontrada')
+    
+    print(f'Movendo para {movimento.name} {movimento.value}')
+
+mover(Enumerador.DIREITA)  # Isso deve funcionar corretamente
+mover(Enumerador.ESQUERDA)  # Isso também deve funcionar corretamente
+print(Enumerador.DIREITA.name)
+print(Enumerador.DIREITA.value)
+print(Enumerador.ESQUERDA.name)
+print(Enumerador.ESQUERDA.value)
+print(Enumerador(1).name)

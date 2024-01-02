@@ -1,0 +1,16 @@
+[
+  {
+    "_Carro__fabricante": "Volkswaggen",
+    "_Carro__nome": "Gol",
+    "_Carro__preco": "80000",
+    "_Carro__potencia": 200,
+    "_Carro__velocity": 60
+  },
+  {
+    "_Carro__fabricante": "Ford",
+    "_Carro__nome": "Fiesta",
+    "_Carro__preco": 50000,
+    "_Carro__potencia": 150,
+    "_Carro__velocity": 80
+  }
+]

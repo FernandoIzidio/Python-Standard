@@ -1,0 +1,140 @@
+@media screen and (max-width: 1100px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 6px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 4px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 3px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 2.4px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    #request {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    [maxminlenght] {
+        max-width: 60rem;
+    }
+    svg {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 150px) {
+    
+    [maxminlenght] {
+        max-width: 45rem;
+    }
+
+    nav a {
+        padding: 1.45rem;
+    }
+  
+}
+
+@media screen and (max-width: 125px) {
+    [maxminlenght] {
+        max-width: 42rem;
+    }
+  
+}
+
+
+
+
+@media screen and (min-width: 1600px) and (max-width: 2000px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (min-width: 2001px) and (max-width: 2600px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 2601px) and (max-width: 3000px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 3001px) and (max-width: 3600px) {
+    html {
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 3601px) and (max-width: 4000px) {
+    html {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 4001px) and (max-width: 4600px) {
+    html {
+        font-size: 33px;
+    }
+}
+
+@media screen and (min-width: 4601px) and (max-width: 5000px) {
+    html {
+        font-size: 36px;
+    }
+}
+
+
+@media screen and (min-width: 4601px) and (max-width: 5000px) {
+    html {
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width: 5000px) and (max-width: 5600px) {
+    html {
+        font-size: 44px;
+    }
+}

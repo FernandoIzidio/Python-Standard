@@ -1,0 +1,2 @@
+Primeira linha do arquivo.txt
+Em um arquivo criado por context manager de decorator

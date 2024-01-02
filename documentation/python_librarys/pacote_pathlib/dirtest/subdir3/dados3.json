@@ -1,0 +1,222 @@
+[
+  {
+    "Dados_Cliente": {
+      "Nome": "Samuel",
+      "Sobrenome": "da Cunha",
+      "Idade": 45,
+      "Telefone": "+55 (061) 7201-3550",
+      "Email": "pietrosales@example.net",
+      "Endereço": "Travessa da Rocha, 63\nVila Ouro Minas\n72613-327 da Mata / MT"
+    },
+    "Produtos_Comprados: ": {
+      "Produto 1": "R$379,38",
+      "Produto 2": "R$184,28",
+      "Produto 3": "R$16,46",
+      "Produto 4": "R$56,86",
+      "Produto 5": "R$139,16",
+      "Produto 6": "R$194,46",
+      "Produto 7": "R$13,06",
+      "Produto 8": "R$13,25",
+      "Produto 9": "R$245,73",
+      "Produto 10": "R$365,83"
+    }
+  },
+  {
+    "Dados_Cliente": {
+      "Nome": "Diego",
+      "Sobrenome": "Aragão",
+      "Idade": 16,
+      "Telefone": "(071) 1044-7894",
+      "Email": "isisda-cunha@example.net",
+      "Endereço": "Aeroporto Rezende, 3\nMinas Caixa\n71154-326 Porto / MS"
+    },
+    "Produtos_Comprados: ": {
+      "Produto 1": "R$269,21",
+      "Produto 2": "R$85,69",
+      "Produto 3": "R$214,77",
+      "Produto 4": "R$154,23",
+      "Produto 5": "R$15,17",
+      "Produto 6": "R$409,84",
+      "Produto 7": "R$40,85",
+      "Produto 8": "R$201,18",
+      "Produto 9": "R$295,75",
+      "Produto 10": "R$349,06"
+    }
+  },
+  {
+    "Dados_Cliente": {
+      "Nome": "Paulo",
+      "Sobrenome": "Lopes",
+      "Idade": 54,
+      "Telefone": "(061) 7179-9174",
+      "Email": "leticia12@example.com",
+      "Endereço": "Viaduto João Lucas Nunes, 79\nNovo Aarão Reis\n89410308 Almeida / MG"
+    },
+    "Produtos_Comprados: ": {
+      "Produto 1": "R$349,49",
+      "Produto 2": "R$156,83",
+      "Produto 3": "R$228,84",
+      "Produto 4": "R$123,62",
+      "Produto 5": "R$281,96",
+      "Produto 6": "R$213,50",
+      "Produto 7": "R$314,50",
+      "Produto 8": "R$77,80",
+      "Produto 9": "R$21,09",
+      "Produto 10": "R$385,22"
+    }
+  },
+  {
+    "Dados_Cliente": {
+      "Nome": "Ana Júlia",
+      "Sobrenome": "Souza",
+      "Idade": 57,
+      "Telefone": "41 1517-2339",
+      "Email": "ana23@example.org",
+      "Endereço": "Residencial de Castro, 94\nVila Canto Do Sabiá\n23566772 Peixoto / AP"
+    },
+    "Produtos_Comprados: ": {
+      "Produto 1": "R$154,11",
+      "Produto 2": "R$195,16",
+      "Produto 3": "R$181,30",
+      "Produto 4": "R$95,87",
+      "Produto 5": "R$71,90",
+      "Produto 6": "R$134,17",
+      "Produto 7": "R$138,95",
+      "Produto 8": "R$106,14",
+      "Produto 9": "R$305,95",
+      "Produto 10": "R$79,71"
+    }
+  },
+  {
+    "Dados_Cliente": {
+      "Nome": "Laís",
+      "Sobrenome": "da Mata",
+      "Idade": 28,
+      "Telefone": "84 3920 6574",
+      "Email": "osantos@example.org",
+      "Endereço": "Rua Ana Julia Araújo, 54\nCandelaria\n50507305 Mendes Paulista / PR"
+    },
+    "Produtos_Comprados: ": {
+      "Produto 1": "R$51,16",
+      "Produto 2": "R$258,08",
+      "Produto 3": "R$263,55",
+      "Produto 4": "R$385,24",
+      "Produto 5": "R$123,10",
+      "Produto 6": "R$302,03",
+      "Produto 7": "R$283,28",
+      "Produto 8": "R$29,45",
+      "Produto 9": "R$272,56",
+      "Produto 10": "R$53,32"
+    }
+  },
+  {
+    "Dados_Cliente": {
+      "Nome": "Giovanna",
+      "Sobrenome": "Azevedo",
+      "Idade": 42,
+      "Telefone": "(021) 5216-4087",
+      "Email": "luigibarbosa@example.net",
+      "Endereço": "Trecho Leandro Pires\nLaranjeiras\n68036373 Ramos / AM"
+    },
+    "Produtos_Comprados: ": {
+      "Produto 1": "R$273,52",
+      "Produto 2": "R$99,68",
+      "Produto 3": "R$46,24",
+      "Produto 4": "R$128,82",
+      "Produto 5": "R$252,59",
+      "Produto 6": "R$61,52",
+      "Produto 7": "R$98,68",
+      "Produto 8": "R$144,53",
+      "Produto 9": "R$191,40",
+      "Produto 10": "R$179,18"
+    }
+  },
+  {
+    "Dados_Cliente": {
+      "Nome": "Laís",
+      "Sobrenome": "Costela",
+      "Idade": 69,
+      "Telefone": "+55 71 8251-2695",
+      "Email": "maria-alice81@example.net",
+      "Endereço": "Ladeira de Costa, 41\nCidade Jardim\n12153232 Oliveira / CE"
+    },
+    "Produtos_Comprados: ": {
+      "Produto 1": "R$290,40",
+      "Produto 2": "R$23,25",
+      "Produto 3": "R$124,75",
+      "Produto 4": "R$10,28",
+      "Produto 5": "R$128,46",
+      "Produto 6": "R$42,48",
+      "Produto 7": "R$261,84",
+      "Produto 8": "R$30,04",
+      "Produto 9": "R$13,69",
+      "Produto 10": "R$210,59"
+    }
+  },
+  {
+    "Dados_Cliente": {
+      "Nome": "Caio",
+      "Sobrenome": "da Luz",
+      "Idade": 47,
+      "Telefone": "0300-378-7135",
+      "Email": "lazevedo@example.org",
+      "Endereço": "Setor Olivia Carvalho\nGuaratã\n63360-239 Caldeira / TO"
+    },
+    "Produtos_Comprados: ": {
+      "Produto 1": "R$404,08",
+      "Produto 2": "R$53,49",
+      "Produto 3": "R$78,24",
+      "Produto 4": "R$384,31",
+      "Produto 5": "R$38,12",
+      "Produto 6": "R$285,32",
+      "Produto 7": "R$21,74",
+      "Produto 8": "R$90,07",
+      "Produto 9": "R$322,42",
+      "Produto 10": "R$248,50"
+    }
+  },
+  {
+    "Dados_Cliente": {
+      "Nome": "Kamilly",
+      "Sobrenome": "Barbosa",
+      "Idade": 38,
+      "Telefone": "21 0107-9743",
+      "Email": "andrecardoso@example.org",
+      "Endereço": "Morro da Paz, 9\nCamponesa 2ª Seção\n59022370 da Cunha de Gonçalves / MA"
+    },
+    "Produtos_Comprados: ": {
+      "Produto 1": "R$121,92",
+      "Produto 2": "R$77,31",
+      "Produto 3": "R$44,17",
+      "Produto 4": "R$254,22",
+      "Produto 5": "R$45,29",
+      "Produto 6": "R$131,61",
+      "Produto 7": "R$113,15",
+      "Produto 8": "R$47,57",
+      "Produto 9": "R$98,27",
+      "Produto 10": "R$65,76"
+    }
+  },
+  {
+    "Dados_Cliente": {
+      "Nome": "Alexandre",
+      "Sobrenome": "Ramos",
+      "Idade": 71,
+      "Telefone": "+55 (071) 6613 7596",
+      "Email": "ana-laura58@example.org",
+      "Endereço": "Estrada Carvalho, 402\nColégio Batista\n67970929 Duarte Verde / GO"
+    },
+    "Produtos_Comprados: ": {
+      "Produto 1": "R$107,06",
+      "Produto 2": "R$427,67",
+      "Produto 3": "R$17,46",
+      "Produto 4": "R$192,56",
+      "Produto 5": "R$151,26",
+      "Produto 6": "R$73,49",
+      "Produto 7": "R$201,33",
+      "Produto 8": "R$59,41",
+      "Produto 9": "R$48,37",
+      "Produto 10": "R$132,34"
+    }
+  }
+]
