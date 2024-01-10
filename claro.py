@@ -6,8 +6,8 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 CURRENT_FOLDER = pathlib.Path(__file__).parent
-USER = "NET_A6CE64"
-PASSWORD = "383FB3A6CE64"
+USER = "NET_4885C4"
+PASSWORD = "30938C4885C4"
 browser_config = webdriver.ChromeOptions()
 browser_config.binary_location = (CURRENT_FOLDER / 'chrome' / 'chrome.exe').__str__()
 #browser_config.add_argument('--headless')
