@@ -1,20 +1,21 @@
 
 """
-Dataclasses é um decorator que facilita a criação de novos classes, por vir com metódos e atributos já implementados
+Dataclasses recurso que facilita muito a criação de novas classes, pois vem com muitos metódos e atributos implementados
 
-quando a dataclasse é chamada antes da hora, é possivel definir quais metódos ele vai ter ou não
+quando o decorator dataclass é chamado antes da hora, é possivel definir quais metódos ele vai ter implementado ou não
 
 Toda dataclasse precisa de tipagem
 
-astuple - Permite converter um objeto de uma dataclasse em tupla
-asdict - Permite converter um objeto de uma dataclasse em dict(dataclasses não suportam vars())
-fields - Mostra todas as configurações de um atributo
+funções do modulo dataclasses:
+    dataclass - Decorator utilizado para modificar uma classe para dataclasse
+    astuple - Converter uma instância de uma dataclasse em tupla
+    asdict -  Converter um objeto de uma dataclasse em dict(dataclasses não suportam vars())
+    field - Configura atributos de dataclasses
+    fields(fieldSets) - Mostra todas as configurações de um atributo
 
-field - Permite definir um valor padrão mutavel ou imutavel  para um atributo de uma dataclasse, e definir o comportamento desse atributo, se o atributo vai ser incluido no __init__, __repr__, calculo do hash, como variavel a mais na determinação de igualdade e etc
 
 field :
-    Default- Valor padrão do atributo caso não seja fornecido
-    Default_Factory - chama/executação função/classe do valor padrão, caso não seja fornecido nenhum valor
+    Default_Factory/Default - chama/executação função/classe do valor padrão, caso não seja fornecido nenhum valor
     repr - define se o atributo vai ser incluido no repr
     compare - Define se o atributo vai ser incluido no comparations
     hash - Define se o atributo vai ser incluido no calculo do hash
@@ -23,6 +24,7 @@ field :
 from dataclasses import dataclass, astuple, asdict, field
 from faker import Faker
 database = Faker()
+
 @dataclass(frozen=True)#Implementa metódo frozen
 class Pessoas:
 

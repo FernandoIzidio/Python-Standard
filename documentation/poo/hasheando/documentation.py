@@ -1,9 +1,13 @@
 
 """
-hash aceitam apenas valores imutaveis como argumentos
-Dois objetos iguais e como mesmo valor de conteúdo retornam o mesmo hash
+Hash é um valor único que identifica um objeto
 
-Permitem maior eficiência, velocidade e desempenho ao buscar dados
+Objetos hasheaveis podem ser usados como chaves de dicionário
+
+hash() aceitam apenas valores imutaveis como argumentos, ou seja apenas valores imutaveis são hashaveis
+Dois objetos iguais e como mesmo valor de conteúdo retornam o mesmo hash(identificador único), dependendo da implementação do metódo equal
+
+__hash__ - Permite que instâncias da classe sejam usadas como chaves de dicionário
 
 __hash__ atua em conjunto com __eq__
 """
@@ -21,7 +25,7 @@ class Registro:
         return self.user
 
     def __eq__(self, other: object) -> bool:
-        if self.email == other.email:
+        if self.email == other.email and isinstance(other, Registro):
             return True
         return False
     

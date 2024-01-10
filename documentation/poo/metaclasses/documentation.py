@@ -1,16 +1,26 @@
 
 """
-Toda classe em python herda todos os metódos e atributos da metaclasse object ou da metaclasse parent,
+Toda classe em python herda todos os metódos e atributos da metaclasse object 
 
 Metaclasses são as responsáveis por criar outras classes
 É util quando se quer personalizar a forma de criação de uma classe
 
 classe = type(classname, herança, atributosdaclasse) - type retorna a classe de um objeto, ou cria uma nova classe
 
+Toda metaclasse herda de type
+
+Metaclass é uma classe que criar outras classes
+
+__new__ - Só tem acesso a classe, ou seja mcs vai referênciar a própria classe.
+
+mcs é uma convenção para metaclasse, assim com self para metódos de objetos, e cls para metódos de classe
+
 metódos de metaclasses:
     __new__(mcs, classname, herança, atributosclasse) - Responsável por tratar da criação da classe, deve retornar a classe
 
-    __call__(cls, *args, **kwargs) - Responsável pela criação de instancias da classe, deve retornar um objeto da classe
+    __call__(cls, *args, **kwargs) - Torna e classe callable, Responsável pela criação de instancias da classe, deve retornar um objeto da classe
+
+__new__ de uma classe normal vai chamar o __call__ de uma metaclasse, para receber as instâncias, ou objeto da classe
 
 class(metaclass=) - Defina a metaclasse de uma classe
 
@@ -19,7 +29,6 @@ metaclasse(type)
 """
 
 from typing import Any
-
 
 class MetaClasse(type):
 

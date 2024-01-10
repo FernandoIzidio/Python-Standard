@@ -2,8 +2,11 @@
 """
 Dunder Methods - Responsaveis por definir todas as operações suportadas por um objeto python
 
+hash(object) - Retorna um hash único de um objeto
+~object - Invente cada bit de um objeto, 0 vai ser invertido para 1, e 1 invertido para 0
+object2^object - Realiza xor operation em cada bit dos objetos, a xor operation, retorna o bit 1, se a correspondência dos bits for diferente, e 0 se forem iguais
+__instancecheck__(self, instance) - Define o comportamento da função isistance(), e checa se uma instância objeto pertence a classe atual de acordo com as condições definidas, é esperado que esse dunder method retorne bool
 
-__instancecheck__(self, instance) - Define o comportamento da função isistance(), e checa se uma instância objeto pertence a classe atual de acordo com as condições definidas
 __subclasscheck__(self, subclass) - Define o comportamento da função issubclass(), ou seja define sobre quais condições uma outra classe é filha da atual 
 
 methods of construction and inicialization:
@@ -12,16 +15,16 @@ methods of construction and inicialization:
     - __del__ - Define o comportamento de remoção de um objeto
     - __call__ - Torna um objeto callable
     
-    
+
 Representation Methods:
 
     __repr__ - Define como um objeto deve ser montado
     __str__ - Define a representação string de um objeto
     __bool__ - Define o valor boolean de um objeto
     __format__(self, formatos) - Define os tipos de formatação suportados por um objeto, uma formatação é definida pelo valor depois dos : exemplo objeto:format, é possivel customizar a representação de um objeto de acordo com um formato escolhido
-    __hash__ - Define o comportamento da função hash() no objeto da classe, normalmente deve retornar um inteiro, é util para comparação rápida entre chaves de dicionários
-    __dir__ - Define o comportamento da função dir(), e deve retornar uma lista de atributos do objeto
-    __dict__ - Define o comportametno da função vars(), e deve retornar uma lista de atributos do objeto
+    __hash__ - Define o hash único dos objetos da classe, ao implementar esse dunder method, os objetos da classe podem ser usados como chaves de dicionário. Define o comportamento da função hash() no objeto da classe
+    __dir__ - Define o comportamento da função dir(), e deve retornar uma dicionário de atributos e metódos do objeto
+    __dict__ - Define o comportametno da função vars(), e deve retornar uma dicionário de atributos do objeto
     __sizeof__ - Define o comportametno da função sys.getsizeof()
 
 
@@ -32,14 +35,14 @@ Comparations Methods:
     __gt__(self, other) - Defines behavior for the greater-than operator, >.
     __le__(self, other) - Defines behavior for the less-than-or-equal-to operator, <=.
     __ge__(self, other) - Defines behavior for the greater-than-or-equal-to operator, >=.
-
+    __contains__(self, other) - Define o comportamento da operador in, ou seja determina sobre quais condições um outro objeto vai estar dentro do objeto atual
 
 
 Numeric Methods:
     __pos__ - Define a versão positiva do objeto
     __neg__ - Define a versão negativa do objeto
     __abs__ - Define o valor absoluto do objeto, e o comportamento para função abs()
-    __invert__ - Define o comportamento do operador til ~, esse metódo deve retornar qual valor deixa o objeto negativo
+    __invert__ - Define o comportamento do operador de operador de inversão bit a bit ~, 
     __round__ - Implementa o comportamento de arredondamento da função round()
     __floor__ - Define o comportamento da função floor()
     __ceil__ - Define o comportamento da função ceil()
@@ -49,15 +52,15 @@ arithmetic operators:
     __add__(self, other) - Implementa cOMPORTAMENTO DO operador de +
     __sub__(self, other) - Implementa COMPORTAMENTO DO operador de -
     __mul__(self, other) - Implementa COMPORTAMENTO DO operador de *
-    __floordiv__(self, other) - Implementa comportamento DO operador da divisão inteira,  ///
+    __floordiv__(self, other) - Implementa comportamento DO operador da divisão inteira,  //
     __truediv__(self, other) - Implementa comportamento do operador de divisão /
-    __mod__(self, other) - Implemetna comportamento do operador %
-    __divmod__(self, other) - Implementa comportamento da função divmod()
+    __mod__(self, other) - Implementa comportamento do operador %
     __pow__ - Implementa comportamento do operador de potenciação **
+    __divmod__(self, other) - Implementa comportamento da função divmod()
     __lshift__(self, other) - Implementa comportamento do operador de deslocamento a esquerda <<
-    __rshift__(self, other) - Implementa comportamento do operador de descolamento a direita >>
-    __and__(self, other) - Implementa comportamento do operador &
-    __or__(self, other) - Implementa comportamento do operador |
+    __rshift__(self, other) - Implementa comportamento do operador de descolamento a direita >>, adiciona 0 as esquerda dos bits, cada deslocamento equivale a uma divasão por 2
+    __and__(self, other) - Implementa comportamento do operador &, deve realizar operação bit and bit entre os objetos passados
+    __or__(self, other) - Implementa comportamento do operador |, deve realizar uma operação bit or bit, entre os objetos passados
     __xor__(self, other) - Implementa comportamento do operador bit a bit ^
 
     
@@ -69,7 +72,7 @@ reflected arithmetic operators:
     __rsub__(self, other) - Implements reflected subtraction.
     __rmul__(self, other) - Implements reflected multiplication.
     __rfloordiv__(self, other) - Implements reflected integer division using the // operator.
-    __rtruediv__(self, other) - Implements reflected true division. Note that this only works when from __future__ import division is in effect.
+    __rtruediv__(self, other) - Implements reflected true division. Note that this only works when from __future__ -  Mostra imcompatiblidades da linguagem atualmente
     __rmod__(self, other) - Implements reflected modulo using the % operator.
     __rdivmod__(self, other) - Implements behavior for long division using the divmod() built in function, when divmod(other, self) is called.
     __rpow__ - Implements behavior for reflected exponents using the ** operator. here the mainobject is the pow raised
@@ -110,13 +113,12 @@ Controle de acesso:
     
 Sequencesmethods:
     __len__ - Define o comportamento da função len()
-    __getitem__ - Torna um objeto fatiavel, e permite acessar valores do objeto por chaves
-    __setitem__ - Permite alterar valores de fatias/partes/itens do objeto
+    __getitem__(self, key) - Torna um objeto fatiavel, e permite acessar valores do objeto por chaves
+    __setitem__(self, key, value) - Permite alterar valores de fatias/partes/itens do objeto
     __delitem__ - Permite deletar fatias/partes/ itens do objeto
     __iter__ - torna um objeto iteravel, e deve retornar o próprio objeto self 
     __next__ - Define o comportamento da função next() no objeto, e permite que chama próximos valores em um objeto, ou seja transforma um objeto em um iterator, um iterator deve mostrar o próximo valor, e retornar um erro stop iteration para parar a iteração de um for                                              
     
     __reversed__ - define o comportamento da função reversed()
-    __contains__(self, other) - Define o comportamento da operador in, ou seja determina sobre quais condições um outro objeto vai estar dentro do objeto atual
     __missing__ - Define o comportamento caso for digitado uma chave errada.
 """

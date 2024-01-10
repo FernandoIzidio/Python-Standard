@@ -1,13 +1,13 @@
 
 """
-Para implementar qualquer sequence, basta identificar quais são os metódos e atributos essenciasi que compõem a sequence
+Para implementar qualquer sequence, basta identificar quais são os metódos e atributos essenciais que compõem a sequence
 
 
-__iter__ - Implementa iterables
+__iter__ - Implementa iterables, deve retornar o prório self, objeto
 __iter__ + __next__ - Implementa iterators
 
 
-abc de collection, contém várias classes abstratas com os metódos e atributos necessários para implementar cada sequence
+collections.abc, contém várias classes abstratas com os metódos e atributos necessários para implementar cada sequence
 """
 
 from collections import abc
@@ -64,3 +64,6 @@ for count in range(10):
 
 for item in dicionario:
     print(item)
+
+print("\n\n\n")
+print(dicionario[0])

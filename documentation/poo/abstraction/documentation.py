@@ -1,6 +1,6 @@
 
 """
-ABSTRACT Class method sempre sera o decorator mais interno
+@ABSTRACT Class method sempre sera o decorator mais interno
 
 Para implementar um setter em uma property abstrata o setter tem que descer junto da child class, ou seja só é possivel implementar um setter se a property tiver implementada
 

@@ -6,7 +6,11 @@ Exceptions personalizadas:
 
     
     -em versões mais recentes do python é possivel adicionar notas a objetos da classe erro.
+    erro.add_note()
 
+    __notes__ - Retorna notas de erro
+    __traceback__ - Retorna traceback do erro
+    __args__ - Retorna argumentos passados para o erro
     
     alguns outros metódos e atributos uteis:
         -args - todas mensagens passados pro __init__ do objeto do erro.
@@ -20,8 +24,8 @@ try:
     raise TypeError('Deu um erro')
 except Exception as error:
     error.add_note('mais alguns erros')
-    print(error.args)
-    print(error.__notes__)
+    print(error.args) #Printa argumentos de erro
+    print(error.__notes__) #Printa notas de erro
     othererror = ValueError('OCORREU OUTRO ERRO')
     othererror.with_traceback(error.__traceback__)
     raise othererror from error
