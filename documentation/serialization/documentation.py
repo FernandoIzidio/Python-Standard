@@ -3,7 +3,7 @@ Serialização - é o processo responsável por converter um objeto ou extrutura
 
 Armazenar, transmistir, reconstruir
 
-Serialização : A serialização geralmente envolve o processo de conversão de objetos ou extruturas de dados em um formato serializado, geralmente uma sequência de bytes.
+Serialização : A serialização geralmente envolve o processo de conversão de objetos ou extruturas de dados em um formato serializado, geralmente uma sequência de bytes. Esse objeto serializado é utilizado para trnasferência entre sistemas
 
 Desserialização: Processo inverso, é o processo de converter um objeto serializado, ou seja um sequência de bytes, em seu estado original
 
@@ -21,7 +21,7 @@ Vantagens da serialização:
 
     Interoperabilidade - Permite que os dados possam operar e ser usados em diferentes sistemas e linguagens de programação, um exemplo é um dado/objeto serializado em json, que pode ser reconstruido com integridade em qualquer linguagem
 
-    Armazenamento e Transmissão de dados - A serialização é um processo que facilita muito na armazanagem de dados em bancos de dodas, arquivos, e memória não volatil, também facilita muito na transmissão de dados entre redes
+    Armazenamento e Transmissão de dados - A serialização é um processo que facilita muito na armazanagem de dados em bancos de dados, arquivos, e memória não volatil, também facilita muito na transmissão de dados entre redes
 
 Desvantagens:
     Segurança: A deserialização de objetos, pode apresentar riscos, se vir de fontes não confiaveis, e o processo de desserialização permita a inclusão de código executavel
@@ -33,9 +33,9 @@ def __reduce__(self):
      Retorna uma tupla com até cinco elementos
     return (func, args, state, iterator, extras)
 
-    func - responsável por retornar um instância do objeto a ser serializado, esse é responsável pela deserialização
+    func - Função construtora responsável por retornar um instância do objeto a ser serializado, esse é responsável pela serialização
 
-    *args - argumentos que serão passados para a função durante a deserialização, e criação do objeto
+    *args - argumentos que serão passados para a função durante a serialização, e criação do objeto
 
     state: Uma tupla ou outro objeto que representa o estado interno do objeto a ser serializado. Isso pode incluir informações adicionais que não são passadas como argumentos para o construtor.
 
