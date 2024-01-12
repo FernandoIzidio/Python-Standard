@@ -17,7 +17,8 @@ browser_service = Service(executable_path=(CURRENT_FOLDER / "chromedriver" / 'ch
 browser = webdriver.Chrome(browser_config, browser_service)
 def sleep_wireless(status:bool) -> None:
     browser.get('http://192.168.0.1/logout.html')
-    sleep(5)
+    browser.implicitly_wait(5)
+    
     box_user = browser.find_element(By.XPATH, '/html/body/div[2]/div/form/div[1]/div/input')
     box_user.send_keys(USER)
     box_passwd = browser.find_element(By.XPATH, '/html/body/div[2]/div/form/div[2]/div/input')

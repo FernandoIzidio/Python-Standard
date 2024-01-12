@@ -1,6 +1,8 @@
 """
 Objetos timedelta representam a diferença entre dois objetos time e date, ou dois objetos datetime
 
+TimeDelta é o descolamento de tempo
+
 timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0) - Para criar um objeto timedelta, todos argumentos de construção são opcionais, e os argumentos podem receber valores inteiros, ou flutuantes
 
 se o objeto timedelta receber argumentos para minutes, miliseconds, hours, weeks, eles serão convertidos, em days, seconds, e microseconds internamente, e todas valores fracionarios são arredondas para inteiro internamente

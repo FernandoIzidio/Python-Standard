@@ -7,9 +7,19 @@ Convenções:
 
 ducktyping - O python não está interessado nos nomes das classes, o python está interessado mais na presença de determinados metódos ou atributos
 
+GIL - Global interpreter Lock a implementação do python padrão em C, tem esse esse recurso GIL, que permite que apenas uma thread por vez execute um módulo python
+
+
+
 transpilador - Converte código de uma linguagem para outra
 
-interpretador - Interpreta linha a linha, e executa código de máquina linha a linha
+interpretador - Um interpretador analisa o código fonte, e compila/transpila o código fonte, em uma linguagem de baixo nivel ou bytecode, o interpretador da linguagem vai interpretar essa linguagem de baixo nivel, ou esse bytecode, e executar cada comando linha a linha
+
+ByteCode - Nivel intermediario entre linguagem e código de maquina, não varia de acordo com a arquitetura, e pode ser interpretado independente da plataforma.
+
+JIT(Just in Time) - Se refere ao processo de compilação em código de maquina, apenas durante a execução do programa.
+
+O pyhton ao executar gera um arquivo bytecode pyc, que vai ser interpretado pelo interpretador PythonC, que vai compilar linha a linha, cada linha do bytecode em código de maquina.
 
 Compilador - Compilador analisa o código fonte inteiro e gera um arquivo executavel, com código de maquina
 
@@ -20,6 +30,18 @@ Sobreposição = Suportado pelo python, só é possivel implementar/modificar me
 
 Sobrecarga - Qualquer metódo/atributo pode ser implementado em qualquer objeto/classe, independente desses metódos existirem ou não na parent class
 
+
+CPython: É o interpretador padrão python.
+
+Jython: Um interpretador Python que roda na Máquina Virtual Java (JVM).
+
+IronPython: Um interpretador Python que roda no ambiente .NET.
+
+PyPy: Um interpretador alternativo que visa ser mais rápido do que o CPython. Ele usa a compilação just-in-time (JIT) para otimizar o desempenho. Este interpretador, converte linha a linha no momento de execução, cada linha em código de maquina, sem passar pelo processo de compilação em bytecode. Oque melhora muito o desempenho. Esse interpretador é mais utilizado em jogos
+
+MicroPython: Projetado para ser executado em ambientes com recursos limitados, como microcontroladores.
+
+Stackless Python: Uma versão modificada do CPython que adiciona suporte para microthreads.
 
 Todo metódo por padrão tem acesso aos objetos da classe, ou seja todo metódo por padrão é metódo de objeto
 
