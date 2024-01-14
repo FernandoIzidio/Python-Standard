@@ -6,8 +6,8 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 CURRENT_FOLDER = pathlib.Path(__file__).parent
-USER = "NET_4885C4"
-PASSWORD = "30938C4885C4"
+USER = "NET_4B85C4"
+PASSWORD = "3093BC4B85C4"
 browser_config = webdriver.ChromeOptions()
 browser_config.binary_location = (CURRENT_FOLDER / 'chrome' / 'chrome.exe').__str__()
 #browser_config.add_argument('--headless')
@@ -16,7 +16,7 @@ browser_service = Service(executable_path=(CURRENT_FOLDER / "chromedriver" / 'ch
 
 browser = webdriver.Chrome(browser_config, browser_service)
 def sleep_wireless(status:bool) -> None:
-    browser.get('http://192.168.0.1/logout.html')
+    browser.get('http://192.168.0.1/')
     browser.implicitly_wait(5)
     
     box_user = browser.find_element(By.XPATH, '/html/body/div[2]/div/form/div[1]/div/input')
@@ -32,17 +32,6 @@ def sleep_wireless(status:bool) -> None:
     sleep(5)
     
 
-    """
-    ip_status = htmlparsed.select_one("tod-table > tbody:nth-child(2) > tr > td:nth-child(7)")
-    ip_status2 = htmlparsed.select_one("tod-table > tbody:nth-child(3) > tr > td:nth-child(7)")
-    ip_status3 = htmlparsed.select_one("tod-table > tbody:nth-child(4) > tr > td:nth-child(7)")
-    ip_status4 = htmlparsed.select_one("tod-table > tbody:nth-child(5) > tr > td:nth-child(7)")
-    ip_status5 = htmlparsed.select_one("tod-table > tbody:nth-child(6) > tr > td:nth-child(7)")
-    ip_status6 = htmlparsed.select_one("tod-table > tbody:nth-child(7) > tr > td:nth-child(7)")
-    ip_status7 = htmlparsed.select_one("tod-table > tbody:nth-child(8) > tr > td:nth-child(7)")
-    ip_status8 = htmlparsed.select_one("tod-table > tbody:nth-child(9) > tr > td:nth-child(7)")
-    ip_status9 = htmlparsed.select_one("tod-table > tbody:nth-child(10) > tr > td:nth-child(7)")
-    """
     if status:
         for ip_index in range(1, 10):
             ip_config = browser.find_element(By.XPATH, f'/html/body/div[2]/div/div[2]/div/div/form/ul/table/tbody[{ip_index}]/tr/td[17]/input')

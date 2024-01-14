@@ -11,11 +11,18 @@ GIL - Global interpreter Lock a implementação do python padrão em C, tem esse
 
 Toda classe tem que ser reutilizavel em diversos contextos, para solucionar um problema em especifico
 
-S
-O
-L
-I
-D
+Interfaces - São um conjunto de metódos que uma child-class que herda dessa interface pode implementar
+Obs: Não é possivel implementar nenhum metódo concreto em uma interface.
+
+Em classes abstratas, além de definir a assinatura de uma familía de classes. É possivel ter metódos abstratos/metódos de assinatura(para serem implementados nas childs class), e metódos concretos. Ou seja classes abstratas tem tanto metódos de assinatura, como metódos concretos.
+
+obs: Nas interfaces só é possível implementar metódos de assinatura.
+
+S - Single reponsability princible - Toda função/metódo tem que ter apenas uma responsabilidade.
+O - Open to extend/Close to modify Princible - Toda class é aberta  a ser extendida e fechada para modificações
+L - Liskov Copy Princible - Toda child class tem que ser capaz de substituir a parent class, sem quebrar o programa
+I - Interface Segregation Princible - Não forçar uma classe a implementar interfaces/classes abstratas, que não são relevantes para a classe. Segregar classes abstratas e interfaces, e deixar a child class, escolher qual classe abstrata/interface implementar
+D - Dependecie Inversion Princible - Principio da inversão de dependência, a parent class/class abstrata não deve depender da child class. E sim a child class tem que depender da parent class/classe abstrata
 
 
 transpilador - Converte código de uma linguagem para outra

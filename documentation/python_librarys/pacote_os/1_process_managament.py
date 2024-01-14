@@ -15,7 +15,7 @@ Conjunto de funções de os que são usadas para identificar processos em execu�
 
     os.uname() - Retorna informações que identificam o sistema operacional atual, versão, arquitetura, e id de rede
 
-    system(prompt:str) - Permite executar prompts no terminal
+
 
     environ - Retorna variaveis de ambiente do SO
 
