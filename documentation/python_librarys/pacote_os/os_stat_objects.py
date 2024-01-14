@@ -5,15 +5,15 @@ tempo epoch ==  timestamp
 
 stmode -  Verifica as permissões do arquivo, e o tipo do arquivo(diretório, arquivo, atalho)
 stino - Retorna o númeero inode(número identificador exclusivo no sistema de arquivos) PRIMARY KEY
-dtdev - Retorna o dispositivo fisico em que o arquivo 
-st_nlink - Retorna o número de diretórios para acessar o arquivo
+dtdev - Retorna o endereço do dispositivo fisico em que o arquivo  esta armazenado
+st_nlink - Retorna o número de referências/atalhos para o arquivo 
 st_uid - Retorna o id do usuário
 st_gid - Retorna o id do grupo
 st_atime - Retorna o timestamp da ultima vez que o arquivo foi lido
 st_mtime - Retorna o timestamp da ultima vez que o arquivo foi modificado
-st_ctime - Retorna o timestamp do momento de criação do arquivo
-st_blksize - Retorna tamanho médio das linhas/colunas, ajuda em operações de escrita e leitura
-st_blocks - Retorna o números de colunas/linhas do arquivo
+st_ctime - Retorna o timestamp do ultima mudança de status/permissões
+st_blksize - Retorna tamanho utilizado para alocação do arquivo
+st_blocks - Retorna o números de blocks(padrão 512 bytes cada bloco), que determinado arquivo ocupa
 
 
 """

@@ -13,6 +13,8 @@ Conjunto de funções de os que são usadas para identificar processos em execu�
 
     name - Nome do SO em execução
 
+    os.uname() - Retorna informações que identificam o sistema operacional atual, versão, arquitetura, e id de rede
+
     system(prompt:str) - Permite executar prompts no terminal
 
     environ - Retorna variaveis de ambiente do SO
@@ -45,7 +47,7 @@ Conjunto de funções de os que são usadas para identificar processos em execu�
     fspath(caminho: str | bytes) -> str | bytes - Retorna determinado caminho em um formato compativel com o sistema de arquivos atual
 
     
-    os.get_exec_path() - Retorna uma lista de diretórios, os quais o sistema busca por arquivos executaveis.    
+    os.get_exec_path() - Retorna uma lista de diretórios, os quais o sistema busca por arquivos executaveis. São esses caminhos que o módulo subprocess procura, ao trabalhar com executaveis  
 
     os.geteuid - Retorna o id de usuário efetivo do processo atual, ou seja retorna o id do usuário que está executando o processo.
 
@@ -116,7 +118,7 @@ Conjunto de funções de os que são usadas para identificar processos em execu�
 
     os.umask(mask) - Define a mascara de usuario para o processo atual
 
-    os.uname() - Retorna informações que identificam o sistema operacional atual
+  
     
     
     """

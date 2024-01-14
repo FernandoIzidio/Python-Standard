@@ -9,6 +9,13 @@ ducktyping - O python não está interessado nos nomes das classes, o python est
 
 GIL - Global interpreter Lock a implementação do python padrão em C, tem esse esse recurso GIL, que permite que apenas uma thread por vez execute um módulo python
 
+Toda classe tem que ser reutilizavel em diversos contextos, para solucionar um problema em especifico
+
+S
+O
+L
+I
+D
 
 
 transpilador - Converte código de uma linguagem para outra
