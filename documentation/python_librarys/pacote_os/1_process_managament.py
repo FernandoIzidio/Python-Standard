@@ -2,20 +2,28 @@
 """
 Filedescriptor - Número inteiro que identifica um processo em execução
 
-CHDIR - Change directory, usado para mudar diretório de trabalho
-FCHDIR - Change directory basead in file descriptor - Muda o diretório de trabalho atual baseado no file descriptor
+CHDIR - Change directory, usado para mudar diretório de trabalho atual
+FCHDIR - Change directory basead in file descriptor - Muda o diretório de trabalho somente durante a execução do filedescriptor.
 
-OctPermitionMask - É um número octal que concede permissões a determinado processo no SO
+OctPermitionMask - É um número octal que concede permissões a determinadas a  processo no SO
+
+Sistema de arquivos - NTFS, etx4, FAT32
 
 grupo de processos - É um grupo de processos distintos ou semelhantes, que mantém uma relação entre si, e são tratados de forma coletiva pelo SO. Ou seja quando eu quero agrupar um conjunto de processos que se comuniquem o ideal é definir um gpid
 
-Conjunto de funções de os que são usadas para identificar processos em execução, arquivos abertos, configurar permissões, definir mascaras e etc:
+ID Real - Permissões reais no momneto de execução do processo
 
-    name - Nome do SO em execução
+ID efetivo - Permissões temporarias validas apenas durante a execução do processo.
+
+ID saved - Permissões efetivas que foram persistidas para posteriores execuções desse processo.
+
+Conjunto de funções de OS que são usadas para identificar processos em execução, arquivos abertos, configurar permissões, definir mascaras e etc:
+
+    name - Nome do SO em execução, posix, nt, java
 
     os.uname() - Retorna informações que identificam o sistema operacional atual, versão, arquitetura, e id de rede
 
-
+    os.kill(pid, signal) - Emite signals para o sistema operacional em determinado processo, SIGKILL é um signal bem comum para encerrar um processo
 
     environ - Retorna variaveis de ambiente do SO
 
@@ -23,22 +31,26 @@ Conjunto de funções de os que são usadas para identificar processos em execu�
 
     getenv - Retorna o valor de uma variavel de ambiente
 
+    getenvb - Retorna o valor de uma variavel de ambiente no formato binário
+    
     os.putenv(key, value) - Define variavel de ambiente
     
     os.unsetenv(key, /) - Remove variavel de ambiente no processo atual
 
-    getenvb - Retorna o valor de uma variavel de ambiente no formato binário
 
 
-    os.open(way, maskoctal, * , permitions) -> filedescriptor - Abre um arquivo/processo
+    os.open(way, maskoctal, * , permitions) -> filedescriptor - Abre um arquivo/processo, com determinadas permissões
 
     os.close(fd) - Encerra um processo em execução
 
+    
+    os.getcwd() - Retorna o diretório de trabalho atual
+
     os.chdir(caminho:str) - Define o diretório de trabalho atual
 
-    os.fchdir(fd) - Define o diretório de trabalho atual baseado no caminho de um processo em execução
+    os.fchdir(fd) - Define o diretório de trabalho atual somente para um processo em execução
 
-    os.getcwd() - Retorna o diretório de trabalho atual
+    
 
     fsencode(caminho:str) -> str - Codifica um caminho para a codificação do sistema de arquivos atual
 
@@ -61,7 +73,7 @@ Conjunto de funções de os que são usadas para identificar processos em execu�
 
     os.getgroups - Retorna uma lista de id's dos grupos, que o processo atual pertence
 
-    os.getlogin - Retorna o nome do usuário que está logado no terminal controlador
+    os.getlogin - Retorna o nome do usuário que está logado no terminal 
 
     os.getpgid(pid) - Retorna o id do grupo de processos, que o processo especificado pertence, se pid for 0 ele retorna o id do grupo de processos, do processo atual
 
@@ -83,8 +95,6 @@ Conjunto de funções de os que são usadas para identificar processos em execu�
 
     os.initgroups(username, gid) - Usado para definir os grupos de um processo, ou seja definir quais usuários fazem parte de quais grupos, em determinados processos(software em execução)
 
-    os.putenv(key, value) - Usado para definir variaveis de ambiente no sistema operacional
-
     os.setegid(egid, /) - Define o id de grupo efetivo para o processo atual
 
     os.seteuid(euid, /) - Define o id de usuario efetivo para o processo atual
@@ -97,7 +107,7 @@ Conjunto de funções de os que são usadas para identificar processos em execu�
 
     os.setpgid(pid, pgrp) - Define o id do grupo de processos atual
 
-    os.setpriority(PRIO_, ID, prioritylevel:int) -  Define o nivel de prioridade de um processo, grupo de processos, 
+    os.setpriority(PRIO_, ID, prioritylevel:int) -  Define o nivel de prioridade de um processo, grupo de processos, usuario
     
     os.setregid(rgid, egid, /) - Define o id de grupo efetivo e real para o processo atual
 
@@ -133,7 +143,7 @@ print("Id do processo atual: ", os.getpid())
 print("Id do pai do processo atual", os.getppid())
 print("Nome do processo: ", currentprocess.name())
 print("Nome do pai do processo: ", psutil.Process(os.getppid()).name())
-print("Nível de prioridade: ")
+print("Status do processo: ",  psutil.Process(os.getpid()).status())
 print()
 print("Value in Bytes for Vars Envirotment:", os.supports_bytes_environ)
 print(os.access('C:\\', mode=os.O_RDONLY))
