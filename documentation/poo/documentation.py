@@ -24,10 +24,21 @@ L - Liskov Copy Princible - Toda child class tem que ser capaz de substituir a p
 I - Interface Segregation Princible - Não forçar uma classe a implementar interfaces/classes abstratas, que não são relevantes para a classe. Segregar classes abstratas e interfaces, e deixar a child class, escolher qual classe abstrata/interface implementar
 D - Dependecie Inversion Princible - Principio da inversão de dependência, a parent class/class abstrata não deve depender da child class. E sim a child class tem que depender da parent class/classe abstrata
 
+O python faz duas passagens pelo código a primeira para coletar definições das variaveis, metódos e etc, e assim compilar o bytecode, e a segunda leitura é no momento de execução(momento de conversão de bytecode para código de máquina)
+
+@function é a mesma coisa que function()
+quando há objetos abaixo de @, os objetos são passados como argumento pro decorator
+
+
+Se atributos de classe forem modificados, essa modificação é persistente, para a geração de novas instâncias da classe
 
 transpilador - Converte código de uma linguagem para outra
 
 interpretador - Um interpretador analisa o código fonte, e compila/transpila o código fonte, em uma linguagem de baixo nivel ou bytecode, o interpretador da linguagem vai interpretar essa linguagem de baixo nivel, ou esse bytecode, e executar cada comando linha a linha
+
+super(classeAtual, cls/self(instância da classe atual)) - Indica a relação da classe atual com a instância atual para o super()
+
+super().__new__(cls) - Retorna um objeto da classe cls
 
 ByteCode - Nivel intermediario entre linguagem e código de maquina, não varia de acordo com a arquitetura, e pode ser interpretado independente da plataforma.
 
