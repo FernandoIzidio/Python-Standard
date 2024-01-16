@@ -4,8 +4,8 @@ Names:
     fake.name() - Gera nome de pessoa aleatório
     fake.first_name() - Gera primeiros nomes
     fake.last_name() - Gera sobrenomes
-    fake.name_male - Nomes masculinos
-    fake.name_female - Nomes femininos
+    fake.name_male() - Nomes masculinos
+    fake.name_female() - Nomes femininos
 
 
 textos e palavras:

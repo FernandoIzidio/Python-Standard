@@ -1,6 +1,6 @@
 
 """
-Módulo excelente para execução de processos ou comandos externos
+Módulo excelente para execução de processos ou comandos externos ao python
 Ele só executa processos e programas que podem ser executados por terminal
 
 stdout -> saida de dados do processo
