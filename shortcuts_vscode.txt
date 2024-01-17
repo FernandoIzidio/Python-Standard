@@ -1,0 +1,62 @@
+vscode:
+    
+
+    seleção de texto:
+        Control + shift + arrow
+        
+        Control + shift + bellow/up arrow - Habilita multiplas cursores(vscode)
+
+    
+    Collapser/Fold current block:
+        Control + -
+
+    Collapser todos blocks:
+        Control + shift + -
+
+    Expadir Bloco atual
+        Control + =
+
+    Expandir Todos blocos:
+        Control + shift + =
+    
+    Fold Block comments:
+        Control + shift + k
+
+    Deletar linha:
+        Control + Y
+
+    Movendo seleção atual:
+            alt + up/down - arrow
+
+
+    Refazer Ação:
+        Control + shift + z
+
+
+    Acessar Top-Bar-Menu:                                                                                                           
+        Control + Alt 
+        Alt + firts_letter
+
+    Explorer Section:
+        Control + Shift + E
+
+    Extension Section:
+        Control + Shift + X
+                                                  
+
+
+
+    Mover janela:
+        control + down/up arrow
+
+
+
+    Comentários:
+        Control + /  - Comentar linha
+        Control + shift + / - Descomentar uma linha
+
+    Duplicar linha atual:
+        Control + D 
+
+ 
+    

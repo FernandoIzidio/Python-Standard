@@ -1,0 +1,84 @@
+alt + 1 - Pycharm
+
+Pycharm:
+    Recursos uteis:
+        Histórico de alterações
+
+    Seções de menu:
+           Control + shift + a - Abre menu de actions
+
+           shift + shift - Abre o menu de busca
+
+           Control + N - Abre a busca de classes
+
+           alt + 7 - Mostra a extrutura do projeto, com todas as vars implementadas
+
+           Control + shift + N - Abre o menu de busca de arquivos
+
+           shift + F6  - Abre seção de rename, ou renomeia funções
+
+           control + alt + shift + T - Abre menu de refatoramento
+
+    Visualização/Navegação:
+            Control + p - Mostra assinatura do metódo
+
+            Control + q - Mostra a documentação de uma função
+
+            Control + shift + i -  Mostra a definição de uma função
+
+            Control + F1 - Mostra os warnings de uma expressão
+
+            F2 - Vai direto para uma linha de erro/warning
+
+            Control + B - Vai para a definição de uma classe
+
+            Control + E - Mostra histórico de arquivos recentes
+
+    Power-Shortcuts:
+        alt + enter - Utilizado para fazer correções, verificar sugestões, corrigir erros de importação, refatorações e correções rapidas
+    
+        alt + z - Quebra de linha
+
+        Control + espaço - oferece sugestões de complete
+        Control + shift + espaço - Habilita smart completation e fornece sugestões pelo contexto
+
+        Control + alt + l - Reformata o código em um formato legivel, de acordo com as diretrizes do projeto
+
+        Control + shift + F - Procura todas as ocorrências de uma string em todos arquivos
+
+        Control + shift + R - Substitui determinada string em diversas ocorrências em um projeto
+
+    
+        Control + alt + v - Declara uma variavel que vai armezenar o conteúdo de todas as ocorrências do cursos
+
+    
+    
+    Seleção de texto:
+        Control + shift + arrow
+        control + w - Seleciona palavra atual
+        
+
+    Seleção de ocorrências:
+        alt + j - coloca o seletor em uma ocorrência, e na proxima chamada, coloca outro seletor na proxima ocorrência
+        alt + shift + j - remove um seletor
+        control + alt + shift + j  - Coloca  seletor em todas ocorrências
+        Esc - Remove todos os seltores
+
+    Manipulação de conteúdo:
+        Control + shift + up/down arrow - Movendo seleção atual
+
+    
+        Control + shift + z - Refazer Ação
+
+    
+        Control + / - Comentar e descomentar linha
+
+
+    
+        Control + D - Duplicar linha
+
+    
+        Control + y - Remover linha
+
+        expression.postfix - Colocar um ponto após uma expressão pode dar sugestões de postfix
+
