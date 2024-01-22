@@ -7,9 +7,44 @@ Convenções:
 
 ducktyping - O python não está interessado nos nomes das classes, o python está interessado mais na presença de determinados metódos ou atributos
 
+GIL - Global interpreter Lock a implementação do python padrão em C, tem esse esse recurso GIL, que permite que apenas uma thread por vez execute um módulo python
+
+Toda classe tem que ser reutilizavel em diversos contextos, para solucionar um problema em especifico
+
+Interfaces - São um conjunto de metódos que uma child-class que herda dessa interface pode implementar
+Obs: Não é possivel implementar nenhum metódo concreto em uma interface.
+
+Em classes abstratas, além de definir a assinatura de uma familía de classes. É possivel ter metódos abstratos/metódos de assinatura(para serem implementados nas childs class), e metódos concretos. Ou seja classes abstratas tem tanto metódos de assinatura, como metódos concretos.
+
+obs: Nas interfaces só é possível implementar metódos de assinatura.
+
+S - Single reponsability princible - Toda função/metódo tem que ter apenas uma responsabilidade.
+O - Open to extend/Close to modify Princible - Toda class é aberta  a ser extendida e fechada para modificações
+L - Liskov Copy Princible - Toda child class tem que ser capaz de substituir a parent class, sem quebrar o programa
+I - Interface Segregation Princible - Não forçar uma classe a implementar interfaces/classes abstratas, que não são relevantes para a classe. Segregar classes abstratas e interfaces, e deixar a child class, escolher qual classe abstrata/interface implementar
+D - Dependecie Inversion Princible - Principio da inversão de dependência, a parent class/class abstrata não deve depender da child class. E sim a child class tem que depender da parent class/classe abstrata
+
+O python faz duas passagens pelo código a primeira para coletar definições das variaveis, metódos e etc, e assim compilar o bytecode, e a segunda leitura é no momento de execução(momento de conversão de bytecode para código de máquina)
+
+@function é a mesma coisa que function()
+quando há objetos abaixo de @, os objetos são passados como argumento pro decorator
+
+
+Se atributos de classe forem modificados, essa modificação é persistente, para a geração de novas instâncias da classe
+
 transpilador - Converte código de uma linguagem para outra
 
-interpretador - Interpreta linha a linha, e executa código de máquina linha a linha
+interpretador - Um interpretador analisa o código fonte, e compila/transpila o código fonte, em uma linguagem de baixo nivel ou bytecode, o interpretador da linguagem vai interpretar essa linguagem de baixo nivel, ou esse bytecode, e executar cada comando linha a linha
+
+super(classeAtual, cls/self(instância da classe atual)) - Indica a relação da classe atual com a instância atual para o super()
+
+super().__new__(cls) - Retorna um objeto da classe cls
+
+ByteCode - Nivel intermediario entre linguagem e código de maquina, não varia de acordo com a arquitetura, e pode ser interpretado independente da plataforma.
+
+JIT(Just in Time) - Se refere ao processo de compilação em código de maquina, apenas durante a execução do programa.
+
+O pyhton ao executar gera um arquivo bytecode pyc, que vai ser interpretado pelo interpretador PythonC, que vai compilar linha a linha, cada linha do bytecode em código de maquina.
 
 Compilador - Compilador analisa o código fonte inteiro e gera um arquivo executavel, com código de maquina
 
@@ -20,6 +55,18 @@ Sobreposição = Suportado pelo python, só é possivel implementar/modificar me
 
 Sobrecarga - Qualquer metódo/atributo pode ser implementado em qualquer objeto/classe, independente desses metódos existirem ou não na parent class
 
+
+CPython: É o interpretador padrão python.
+
+Jython: Um interpretador Python que roda na Máquina Virtual Java (JVM).
+
+IronPython: Um interpretador Python que roda no ambiente .NET.
+
+PyPy: Um interpretador alternativo que visa ser mais rápido do que o CPython. Ele usa a compilação just-in-time (JIT) para otimizar o desempenho. Este interpretador, converte linha a linha no momento de execução, cada linha em código de maquina, sem passar pelo processo de compilação em bytecode. Oque melhora muito o desempenho. Esse interpretador é mais utilizado em jogos
+
+MicroPython: Projetado para ser executado em ambientes com recursos limitados, como microcontroladores.
+
+Stackless Python: Uma versão modificada do CPython que adiciona suporte para microthreads.
 
 Todo metódo por padrão tem acesso aos objetos da classe, ou seja todo metódo por padrão é metódo de objeto
 

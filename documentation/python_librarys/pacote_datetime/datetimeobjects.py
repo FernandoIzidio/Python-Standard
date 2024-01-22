@@ -8,7 +8,7 @@ Metódos uteis:
 
     now() - Retorna o horário atual
 
-    utcnow() - Retorna o tempo universal, utc 0, ou seja retorna o tempo universal sem fuso-horário
+    utcnow() - Retorna o tempo universal, utc 0, ou seja retorna o tempo universal atual sem fuso-horário
 
     fromtimestamp(timestamp) - Cria um objeto datetime a partir de um timestamp
 
@@ -28,7 +28,7 @@ Metódos uteis:
 
     strftime(formato)-> str - Formata um objeto datetime para um formato em especifico
 
-    utctimetuple() - Retorna a representação de um objeto datetime no formato struct_time.
+    utctimetuple() - Retorna a representação de um objeto datetime no formato struct_time, util para converter de volta para timestamp
 
     utcoffset() - Retorna o deslocamento utc positvo ou negativo(timedelta), de um objeto datetime    
 

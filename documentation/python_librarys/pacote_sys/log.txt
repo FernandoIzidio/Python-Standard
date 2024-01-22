@@ -1,0 +1,8 @@
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\ferna\Desktop\Fernando\Programação\Python-Standard\documentation\python_librarys\pacote_sys\documenation.py", line 108, in <module>
+    raise NotImplementedError from TimeoutError
+NotImplementedError

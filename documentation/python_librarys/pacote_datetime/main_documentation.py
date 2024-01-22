@@ -19,7 +19,7 @@ Principais classes da biblioteca datetime:
 
     timedelta - É uma classe que expressa a diferença de tempo entre dois objetos date e time, ou dois objetos datetime
 
-    tzinfo - Uma classe abstrata usado para criar objetos timezone de forma personalizada, é muito util quando se quer peronsalizar o calculo de fuso-horários, horários de verão, e nomes descritivos de fuso horários, é preciso definir o utcoffset(deslocamento de tempo utc), dst(deslocamento no summer time, também tem que ser um timedelta para expressar quantas horas ele se desloca do utc), tzname(nome descritivo da timezone)
+    tzinfo - Uma classe abstrata usado para criar objetos timezone de forma personalizada, é muito util quando se quer personalizar o calculo de fuso-horários, horários de verão, e nomes descritivos de fuso horários, é preciso definir o utcoffset(deslocamento de tempo utc), dst(deslocamento no summer time, também tem que ser um timedelta para expressar quantas horas ele se desloca do utc), tzname(nome descritivo da timezone)
 
     timezone(utcoffset, tzname) - É uma child class da classe abstrata tzinfo, permite criar um objeto timezone personalizado, usado para modificar o fuso horário de um objeto datetime
 

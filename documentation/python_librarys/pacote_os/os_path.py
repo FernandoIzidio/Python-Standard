@@ -35,6 +35,15 @@ path:
 
     path.getsize -  Retorna o tamanho em bytes de um arquivo/objeto
 
+    path.normpath() - Normaliza um caminho, removendo barras duplas
+
+    path.isfile() - Verifica se determinado caminho é um arquivo
+
+    path.islink() - Verifica se é um atalho
+
+    path.commonpreffix(listPath) - Retorna todo o caminho que uma lista de caminhos tem entre si, e retorna apenas um str, que representa todo o caminho em caminho comum da lista de diretórios
+
+    path.realpath('.') - Semalhente ao resolve do js, realpath, vai tratar de caminhos relativos, e vai converter tudo para caminho absoluto
 
 listdir('str') -> list[str] -> Retorna uma lista de strings, com os diretorios e arquivos de um caminho, resumindo, lista os diretórios e arquivos de um caminho em uma lista
 rename
@@ -44,8 +53,7 @@ remove
 from os import path, system, listdir
 
 
-input(__file__)
-
+print(path.realpath('.'))
 caminho_ramdom = path.join('Desktop', 'Truco', 'Ladrao.txt')
 print(caminho_ramdom)
 diretorio, file = path.split(caminho_ramdom)
@@ -74,3 +82,7 @@ for pasta in listdir(wayabs):
     for file in listdir(pasta):
         print(file)
 
+
+paths = ['/home/user/file1.txt', '/home/user/file2.txt']
+common_prefix = path.commonprefix(paths)
+print(common_prefix)

@@ -7,7 +7,7 @@ shutil:
     copy(caminho/file, caminhodestino/file) -> Copia um arquivo de um diretório para o outro
     copytree(caminho, caminhodestino) -> Copia todos os subdiretorios e arquivos de um caminho, e copia para outro caminho
     rmtree(caminho, ignore_errors=True) -> Remove todos o diretório e todos os seus subdiretórios e arquivos - Util para apagar diretórios com conteúdo
-    move -> Renomeia arquivo, Move arquivo, possui menos erros que rename
+    move -> Renomeia arquivo, Move arquivo, possui menos erros que os.rename
 """
 
 import os

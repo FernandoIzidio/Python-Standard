@@ -11,9 +11,11 @@ https://timeapi.io/documentation/iana-timezones - API que lista todas as timezon
 import zoneinfo
 import datetime
 
-universaltime = datetime.datetime.now(datetime.timezone.utc)
-localtime = datetime.datetime.now()
 formato = "%d/%m/%Y %H:%M:%S"
+
+universaltime = datetime.datetime.utcnow()
+localtime = datetime.datetime.now()
+
 cbzone = zoneinfo.ZoneInfo("Africa/Casablanca")
 cbtime = localtime.astimezone(cbzone)
 

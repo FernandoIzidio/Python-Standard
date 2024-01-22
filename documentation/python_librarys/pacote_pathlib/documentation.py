@@ -14,24 +14,37 @@ pathlib:
         -Todo objeto da classe path, tem como metódo str o caminho especificado 
 
         obj.absolute() - Retorna o caminho absoluto PARA o diretório/arquivo atual
-        obj.parent - Retorna o caminho do diretório acima ou diretório pai
+
+        obj.parent - Retorna o caminho parent/ caminho acima do diretório atual
+
         Path.home() - Retorna o caminho para a pasta do usuário
+
         parts - Separa cada parte de um caminho em uma tupla
+
         drive - Retorna nome do disco/partição
-        root - Retorna o delimatador de arquivos/diretórios
+
+        root - Retorna o delimitador de arquivos/diretórios
+
         anchor -  É uma concatenação da partição, com o delimitador
-        parents - Retorna um iterator com todos os diretórios pais
+
+        parents - Retorna um iterator com todos caminhos de diretórios pais até a raiz
+
         name - Retorna o ultimo nome de um caminho, tipo os.path.basename
+
         suffix - Retorna a ultima extensão de um caminho, tipo os.path.splitext
         suffixes - Retorna todas as extensões de um caminho
+
         stem - Retorna o caminho sem o ultimo sufixo
-        as_posix() - Retorna a representação unix de um caminho
+
+        as_posix() - Retorna a representação unix de um caminho em unix-like
         as_uri() - Retorna a representação de um caminho no formato FTP
         is_absolute() - Verifica se um caminho está no formato absoluto
         is_relative_to(way)   - Verifica se o caminho atual pode ser relativo a outro caminho
         joinpath - Faz a mesma coisa que /, concatena caminhos
         match - Verifica se o caminho corresponde a um padrão
+
         path.relative_to(way) - Retorna um caminho relativo baseado no caminho informado 
+        
         with_name(name) - Altera o ultimo nome de um caminho, ou seja altera o basename
         with_stem(name:str) - Altera o ultimo diretório/arquivo mas mantém a extensão
 

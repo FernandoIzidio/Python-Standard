@@ -12,6 +12,7 @@ Objetos ramdom gerados por systemrandom são mais seguros, e perdem a função s
 import secrets
 import string
 
+
 random = secrets.SystemRandom()
 
 print(random.randint(0,100))

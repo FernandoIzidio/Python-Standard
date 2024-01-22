@@ -1,8 +1,6 @@
 """
 ISO - Organização Internacional de Normalização/Padronização (International standard organization)
 
-Date - é representação em objeto de um calendario no formato gregoriano
-
 date é uma classe simples para trabalhar com manipulação de tempo em anos, meses e dias
 
 date = date(year, month, day) - Todos argumentos são obrigatórios e devem ser inteiros, seguindo determinados ranges, mes tem que estar entre 1 e 12, dias 1 e lasdaymonth, ano 1 e maxyear
@@ -18,7 +16,7 @@ Metódos e atributos uteis:
     
     fromisoformat(AAAA-MM-DD: str) - Cria um objeto date/datetime, a partir de uma string que siga o formato ISO, exemplo 2012-05-30
     
-    fromisocalendar(year, week, weekday) - Cria um objeto date/datetime, a partir de um dia da de determinada semanda de um ano, exemplo cria um objeto datetime a partir do terceiro dia da quarta semana de 2014
+    fromisocalendar(year, week, weekday) - Cria um objeto date/datetime, a partir de um dia da de determinada semana de um ano, exemplo cria um objeto datetime a partir do terceiro dia da quarta semana de 2014
 
     
     min - menor data possivel

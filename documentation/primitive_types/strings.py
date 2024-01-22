@@ -39,8 +39,12 @@ Metódos uteis:
     str.isspace() - Verifica se a string é um espaço em branco
     str.istitle() - Verifica se a string está na TitleCase, onde cada substring separada por espaço, começa com letra maiúscula
     
-    """
+    ascii(str) -> str - Remove todos os caracters que não estão na codificação ascii, e retorna uma string na codificação ascii
 
+    b"" - Converte uma sequencia de caracters(string) em bytes. Nota: Todos os caracteres da string precisam estar na codificação ASCII para serem convertidos para bytes
+
+
+    """
 texto = "Trú cO"
 print(texto.casefold())
 print(f'{texto:=^50}')

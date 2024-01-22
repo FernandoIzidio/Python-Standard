@@ -4,10 +4,12 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from time import sleep
 
-current_folder = pathlib.Path(__file__).parent
-user = "NET_4885C4"
-password = "30938C4885C4"
+CURRENT_FOLDER = pathlib.Path(__file__).parent
+USER = "NET_4B85C4"
+PASSWORD = "3093BC4B85C4"
 browser_config = webdriver.ChromeOptions()
 browser_config.binary_location = (current_folder / 'chrome' / 'chrome.exe').__str__()
 # browser_config.add_argument('--headless')
@@ -15,11 +17,10 @@ browser_config.binary_location = (current_folder / 'chrome' / 'chrome.exe').__st
 browser_service = Service(executable_path=(current_folder / "chromedriver" / 'chromedriver.exe').__str__())
 
 browser = webdriver.Chrome(browser_config, browser_service)
-
-
-def sleep_wireless(status: bool) -> None:
-    browser.get('http://192.168.0.1/logout.html')
-    sleep(5)
+def sleep_wireless(status:bool) -> None:
+    browser.get('http://192.168.0.1/')
+    browser.implicitly_wait(5)
+    
     box_user = browser.find_element(By.XPATH, '/html/body/div[2]/div/form/div[1]/div/input')
     box_user.send_keys(user)
     box_passwd = browser.find_element(By.XPATH, '/html/body/div[2]/div/form/div[2]/div/input')
@@ -31,18 +32,8 @@ def sleep_wireless(status: bool) -> None:
 
     browser.get('http://192.168.0.1/seguranca-controle-dos-pais-filtro-tod.html')
     sleep(5)
+    
 
-    """
-    ip_status = htmlparsed.select_one("tod-table > tbody:nth-child(2) > tr > td:nth-child(7)")
-    ip_status2 = htmlparsed.select_one("tod-table > tbody:nth-child(3) > tr > td:nth-child(7)")
-    ip_status3 = htmlparsed.select_one("tod-table > tbody:nth-child(4) > tr > td:nth-child(7)")
-    ip_status4 = htmlparsed.select_one("tod-table > tbody:nth-child(5) > tr > td:nth-child(7)")
-    ip_status5 = htmlparsed.select_one("tod-table > tbody:nth-child(6) > tr > td:nth-child(7)")
-    ip_status6 = htmlparsed.select_one("tod-table > tbody:nth-child(7) > tr > td:nth-child(7)")
-    ip_status7 = htmlparsed.select_one("tod-table > tbody:nth-child(8) > tr > td:nth-child(7)")
-    ip_status8 = htmlparsed.select_one("tod-table > tbody:nth-child(9) > tr > td:nth-child(7)")
-    ip_status9 = htmlparsed.select_one("tod-table > tbody:nth-child(10) > tr > td:nth-child(7)")
-    """
     if status:
         for ip_index in range(1, 10):
             ip_config = browser.find_element(By.XPATH,

@@ -5,6 +5,8 @@ Threads é um recurso muito util para quando se quer executar multiplos processo
 Concorrência - Uma função/tarefa por thread 
 Paralelismo - Varias funções sendo executadas ao mesmo tempo
 
+GIL - Global interpreter Lock é um recurso utilizado na implementação do PythonC que impedi que mais de uma thread execute um módulo python ao mesmo tempo, ou seja essa biblioteca só emula threads, porque na pratica é tudo feito em um única thread
+
 fun1()
 fun2()
 
@@ -17,7 +19,7 @@ A função correr e atirar sera executada ao mesmo tempo
 
 Criação de threads:
 
-    Por classes - a classe deve herdar da classe threads , e implementar no run, todos os processos que serão executados na thread, cada instância dessa classe sera uma thread
+    Por classes - a classe deve herdar da classe threads , e implementar no run todos os processos que serão executados na thread, cada instância dessa classe sera uma thread
 
     Por funções = usa-se a classe t1 = thread(target=function, args=()) - a classe thread executara essa função com estes argumentos
 
@@ -38,6 +40,8 @@ Lock:
 from threading import Thread, Lock
 from functools import partial
 from time import sleep
+import threading
+
 
 
 class Process(Thread):

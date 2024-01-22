@@ -22,9 +22,8 @@ string: Dados= '''
 '''
 iterable: dict = json.loads(string)
 print(iterable)
-print('Objeto python, conertido em json')
+print('Objeto python, conertido em Stringjson:')
 objjson = json.dumps(iterable, indent=False, ensure_ascii=False)
-print(type(objjson))
 print(objjson)
 
 
