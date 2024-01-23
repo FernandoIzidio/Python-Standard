@@ -49,7 +49,7 @@ import os, datetime, pathlib, string, random, smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-data= datetime.datetime.now().strftime('%d/%m/%Y')
+data=  datetime.datetime.now().strftime('%d/%m/%Y')
 waymail = pathlib.Path(__file__).parent / 'email.html'
 load_dotenv()
 

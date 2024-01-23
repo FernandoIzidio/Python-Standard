@@ -4,6 +4,7 @@ ZipFile(file.zip, mode) - É um context Manager para criar arquivos zip
     zp.write(absoluteway, relativeway) - Adiciona um arquivo, ao arquivo zip
     zp.namelist() - Retorna todos os arquivos do zip
     zp.extractall(way) - Descompacta arquivo zip
+
 Obs: Usar sempre caminhos relativos
  """
 from pathlib import Path
@@ -27,10 +28,6 @@ for count in range(1, 11):
         #file.touch(exist_ok=True)
         #file.write_text(faker.Faker().text())
 
-def track_file(zipobj: ZipFile, currentway:Path, files: list):
-    if files:
-        for file in files:
-            zipobj.write((currentway / file).relative_to(currentway)) 
 
 
 with ZipFile(myzipfile, 'w') as zipfile:

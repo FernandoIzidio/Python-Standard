@@ -27,7 +27,7 @@ Regras simples do CSV
 4 - Use o caractere de escape (") quando o delimitador aparecer no valor.
 
 csv:
-    reader() - Retorna um iterator com todas as linhas do arquivo csv
+    reader() - Retorna um iterator de listas com todas as linhas do arquivo csv
 
     DictReader() - Retorna uma iterator de dicionarios, onde cada dicionário é uma linha do arquivo csv
 
@@ -51,6 +51,7 @@ clientes = ({"Nome": f"{fk.name_male()}",
             "Telefone": f"{fk.phone_number()}",
             "Email": f"{fk.safe_email()}"
             } for count in range(10))
+#Generator
 
 with open(currentdir / "dados_clintes.csv", 'w', encoding="utf-8") as csvfile:
     escritor = csv.writer(csvfile)
@@ -59,3 +60,9 @@ with open(currentdir / "dados_clintes.csv", 'w', encoding="utf-8") as csvfile:
     escritor.writerow(data.values())
     for client in clientes:
         escritor.writerow(client.values())
+
+
+with open(currentdir / "dados_clintes.csv", 'r', encoding="utf") as csvfile2:
+    content = csv.reader(csvfile2)
+    for row in content:
+        print(row)

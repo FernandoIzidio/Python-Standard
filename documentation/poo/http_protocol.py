@@ -1,15 +1,11 @@
 """
-Cabeçalhos são informações adicionais para serem enviadas ao servidor
-metódo da requisição
-pasta/caminho da requisição
-endereço e etc
+Cabeçalhos são informações adicionais para serem enviadas em uma requisição ao servidor, pode conter a codificação(da requisição), a lingua, o id da sessão e etc
+
 
 HyperText Transfer Protocol - Protocolo usado para transferência(enviar e receber dados) de dados na internet
 Ele funciona no modo cliente/servidor:
     - Onde o cliente(navegador) faz uma requisição
     - E seu servidor(site) response com dados adequados(retorna uma response).
-
-Cabeçalho são informações adicionais, enviadas em uma requisição, pode conter a codificação, a lingua, o id da sessão e etc
 
 Metódos essenciais do Protocolo (Http) - cliente side:
     - readmethods(retornam dados):
@@ -23,12 +19,12 @@ Metódos essenciais do Protocolo (Http) - cliente side:
         delete - apagar alguma coisa no documento
     - endereço do recurso a ser acessado (/users/)
     - Os cabeçalhos http (Content-Type, Autorization)
-    - O corpo da mensagem
+    - O corpo da requisição
 
 Metódos essenciais do Protocolo(HTTP) - Server Side:
     - Status de requisição (200 sucess, 404 - Not Found(Requisição não encontrada), 301 - Moved Permanently)
     - cabeçalhos http
-    - corpo da mensagem - Retorno a requisição
+    - corpo da requisição - Retorno a requisição
 
 Criar servidor http no computador, para receber dados de requisição.
 
@@ -45,7 +41,7 @@ python -m http.server -d way port - Serve uma pagina html no localhost
     port a porta em que serviço vai ser aberto/servido
 
 
-Só é permitido um serviço por porta, se tiver mais de um serviço rodando na porta e eu tentar acessar essa porta com outro serviço a requisição vai dar erro.
+Só é permitido um serviço por porta, se tiver mais de um serviço rodando na porta e eu tentar hospedar nessa porta outro serviço a hospedagem vai dar erro.
 Resumindo uma porta por serviço
 
 http:// -> 80 - Serviço rodando na porta 80
